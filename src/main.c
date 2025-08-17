@@ -112,8 +112,8 @@ void update_keystate() {
   static uint32_t start_ms = 0;
   static uint32_t interval_ms = 5;
 
-  // if (board_millis() - start_ms < interval_ms) return;
-  // start_ms += interval_ms;
+  if (board_millis() - start_ms < interval_ms) return;
+  start_ms += interval_ms;
 
   if (tud_suspended()) {
     tud_remote_wakeup();
