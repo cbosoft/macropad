@@ -48,10 +48,6 @@ void update_keystate();
 int main(void) {
   board_init();
 
-  
-  gpio_init(PICO_DEFAULT_LED_PIN);
-  gpio_set_dir(PICO_DEFAULT_LED_PIN, GPIO_OUT);
-
   for (int i = 0; i < 10; i++) {
     const uint pin = BUTTONS_GPIOS[i];
     GPIOS_BUTTONS[pin] = i;
@@ -70,7 +66,6 @@ int main(void) {
   }
 
   while (1) {
-    gpio_put(PICO_DEFAULT_LED_PIN, CURRENT_LAYER == 0);
     tud_task();
     if (CHANGED) update_keystate();
   }
