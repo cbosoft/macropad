@@ -5,4 +5,4 @@ WORKDIR /work
 COPY CMakeLists.txt .
 COPY src src
 COPY deps deps
-CMD cd _build && cmake .. && make
+CMD cd build && cmake .. && make
