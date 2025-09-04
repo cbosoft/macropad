@@ -30,8 +30,8 @@ typedef struct {
 
 // https://github.com/hathach/tinyusb/blob/8a78804ff91271fb32008288777fad9fe73f5735/src/class/hid/hid.h
 const Key BUTTONS_KEYS[2][9] = {
-  { KEY(0), KEY(1), KEY(2), KEY(3), KEY(4), KEY(5), KEY(6), KEY(7), KEY(8), },
-  { KEY(ARROW_LEFT), KEY(ARROW_DOWN), KEY(ARROW_RIGHT), KEY(PAGE_DOWN), KEY(ARROW_UP), KEY(PAGE_UP), { .keycode = HID_KEY_TAB, .modifier = KEYBOARD_MODIFIER_LEFTALT }, KEY(7), KEY(8), },
+  { KEY(ARROW_LEFT), KEY(ARROW_DOWN), KEY(ARROW_RIGHT), KEY(PAGE_DOWN), KEY(ARROW_UP), KEY(PAGE_UP), KEY(ESCAPE), KEY(NONE), { .keycode = HID_KEY_TAB, .modifier = KEYBOARD_MODIFIER_LEFTALT }, },
+  { KEY(1), KEY(2), KEY(3), KEY(4), KEY(5), KEY(6), KEY(7), KEY(8), KEY(9) },
 };
 
 static volatile Key keys_in_play[10] = { 0 };
